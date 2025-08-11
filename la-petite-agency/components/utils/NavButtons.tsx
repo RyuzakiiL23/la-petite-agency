@@ -1,10 +1,10 @@
 import React from "react";
 import { IoArrowUpCircleOutline } from "react-icons/io5";
 
-export default function NavButtons({ tx }: { tx: string }) {
+export default function NavButtons({ tx, iconSize }: { tx: string, iconSize?: string }) {
   return (
-    <div className="group inline-flex items-center cursor-pointer text-xl">
-      <span className="relative text-4xl">{tx}</span>
+    <div className="group inline-flex items-center cursor-pointer">
+      <span className="relative">{tx}</span>
       <div
         className="
         top-0
@@ -19,7 +19,7 @@ export default function NavButtons({ tx }: { tx: string }) {
           group-hover:rotate-90
         "
       >
-        <IoArrowUpCircleOutline className="ml-1" />
+        <IoArrowUpCircleOutline className={iconSize} />
       </div>
     </div>
   );

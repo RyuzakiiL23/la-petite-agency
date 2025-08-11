@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import { ViewTransitions } from "next-view-transitions";
 import Nav from "@/components/FootersNav/Nav";
+import Footer from "@/components/FootersNav/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Nav />
         {children}
+        <Footer />
       </body>
         {/* </ViewTransitions> */}
     </html>
