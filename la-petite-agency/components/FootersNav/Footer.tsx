@@ -6,7 +6,7 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="border-t-2 rounded-2xl border-white text-white relative py-14">
-      <div className="container mx-auto flex flex-col md:justify-between gap-8">
+      <div className="container px-4 md:px-0 mx-auto flex flex-col md:justify-between gap-8">
         {/* Navigation Links */}
         <nav className="flex flex-col md:flex-row gap-6">
           {[
@@ -27,7 +27,7 @@ export default function Footer() {
 
       <div className="w-full border-b container mx-auto my-6"></div>
 
-      <div className="container mx-auto flex justify-between items-center gap-8">
+      <div className="container px-4 md:px-0 mx-auto flex justify-between items-center gap-8">
         {/* Social Links */}
         <ul className="flex items-center gap-4 text-xl ">
           <li className="cursor-pointer">
@@ -51,14 +51,14 @@ export default function Footer() {
       <div className="w-full border-b container mx-auto my-6"></div>
 
       {/* Bottom Bar */}
-      <div className="container mx-auto mt-6 flex flex-col md:flex-row  justify-between gap-4 pt-4 text-sm">
-        <p>© Copyright That Lot 2025, part of The Weber Shandwick Collective.</p>
+      <div className="container px-4 md:px-0 mx-auto mt-6 flex flex-col md:flex-row  justify-between gap-4 pt-4 text-sm">
+        <p>© Copyright La petite Agency 2025, part of the Wammy's House Project.</p>
         <div className="flex items-center gap-4">
           <Link href="/terms-of-use" className="hover:underline">
             Terms of Use
           </Link>
           <Link href="/modern-slavery-act-statement" className="hover:underline">
-            Modern Slavery Act Statement
+            Cookies policy
           </Link>
           <Link href="/privacy-policy" className="hover:underline">
             Privacy Policy

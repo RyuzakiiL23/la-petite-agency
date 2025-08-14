@@ -36,13 +36,13 @@ export default function Nav() {
           </SheetDescription>
         </SheetHeader>
        <div className="h-full w-full flex flex-col justify-center text-4xl text-[#332E4D] space-y-5 pl-14">
-    <NavButtons tx="HOME" iconSize='text-2xl' />
+    <NavButtons tx="OUR WORK" iconSize='text-2xl' />
     <div className="w-4/5 border-t border-[#332E4D]/30" />
-    <NavButtons tx="ABOUT" iconSize='text-2xl' />
+    <NavButtons tx="ABOUT US" iconSize='text-2xl' />
     <div className="w-4/5 border-t border-[#332E4D]/30" />
-    <NavButtons tx="SERVICES" iconSize='text-2xl' />
+    <NavButtons tx="JOIN US" iconSize='text-2xl' />
     <div className="w-4/5 border-t border-[#332E4D]/30" />
-    <NavButtons tx="CONTACT" iconSize='text-2xl' />
+    <NavButtons tx="BLOG" iconSize='text-2xl' />
   </div>
       </SheetContent>
     </Sheet>
