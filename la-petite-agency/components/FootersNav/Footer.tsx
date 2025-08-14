@@ -52,7 +52,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="container px-4 md:px-0 mx-auto mt-6 flex flex-col md:flex-row  justify-between gap-4 pt-4 text-sm">
-        <p>© Copyright La petite Agency 2025, part of the Wammy's House Project.</p>
+        <p>© Copyright La petite Agency 2025, part of the Wammy&apos;s House Project.</p>
         <div className="flex items-center gap-4">
           <Link href="/terms-of-use" className="hover:underline">
             Terms of Use
