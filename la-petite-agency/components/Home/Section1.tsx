@@ -26,7 +26,7 @@ export default function Section1() {
         box,
         { x: screenWidth }, // Start: completely off-screen to the right
         {
-          x: - screenWidth, // End: completely off-screen to the left
+          x: screenWidth > 1000 ? -screenWidth : 4 * -screenWidth, // End: completely off-screen to the left
           ease: 'none', // Keep it linear for smooth scroll
           scrollTrigger: {
             trigger: box,
