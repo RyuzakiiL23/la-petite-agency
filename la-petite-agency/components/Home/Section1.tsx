@@ -3,21 +3,23 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Section2 from './Section2';
 import Section3 from './Section3';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Section1() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const screenWidth = window.innerWidth;
+  useEffect(() => { }, [screenWidth])
 
   // Scroll-based animation
   useGSAP(() => {
     if (!scrollRef.current) return;
 
     const boxes = gsap.utils.toArray<HTMLElement>(scrollRef.current.querySelectorAll('.box-scroll'));
-    const screenWidth = window.innerWidth;
 
     boxes.forEach((box) => {
       gsap.fromTo(
@@ -69,24 +71,51 @@ export default function Section1() {
       {/* <div className='h-[1200px] bg-white w-full'>
         <div className="app relative h-screen w-[100vw] bg-blue-400">
           <div className="box bg-pink-400 h-40 w-40 rounded-xl"></div>
-          <div className="box border border-white h-40 w-40 rounded-xl"></div>
+          <div className="box border border-primary h-40 w-40 rounded-xl"></div>
         </div>
       </div> */}
 
       {/* Scroll animation */}
-      <div className='h-full w-full'>
+      <div className='h-full w-full overflow-hidden'>
         <div className='absolute left-1/2 -translate-x-1/2 bg-[#0b0913] pt-20 h-[2500px]'>
-          <div className="sticky top-1/2 -translate-y-1/2 flex w-full items-center justify-center">
-            <p className="text-8xl text-center text-white ">WE MAKE BRANDS <br /> UNSKIPPABLE</p>
+          <div className="sticky top-1/2 -translate-y-1/2 flex items-center justify-center">
+            <p className="text-5xl md:text-6xl lg:text-7xl text-center text-white sm:min-w-[600px]">WE MAKE BRANDS <br /> UNSKIPPABLE</p>
           </div>
           <div className='absolute h-[1000px] w-full bg-linear-to-t from-[#0b0913] via-[#0b0913] to-white/0 bottom-0'></div>
+        </div>
+        <div className='h-96 w-full relative'>
+          <div className='absolute h-28 w-28 md:h-40 md:w-40 top-10 left-3/5 lg:translate-x-2/3 translate-x-3/4'>
+            <Image
+              src="/images/section1/2.png"
+              alt="Placeholder"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+          <div className='absolute h-20 w-20 md:h-28 md:w-28 top-40 left-3/5 lg:translate-x-4/20 translate-x-3/2'>
+            <Image
+              src="/images/section1/1.webp"
+              alt="Placeholder"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+          <div className='absolute sm:h-60 sm:w-60 h-40 top-[-30px] w-40 sm:right-4/7 right-3/4 sm:-translate-x-1/2'>
+            <Image
+              src="/images/section1/3.png"
+              alt="Placeholder"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+
         </div>
         <div className="app relative h-screen overflow-hidden" ref={scrollRef}>
           <div className="box-scroll w-fit flex gap-10 justify-center">
 
             {/* 1 - Game of Games - Radiant */}
             <div
-              className="border border-white h-[60vh] w-[35vh] rounded-xl overflow-hidden hover:w-[45vh] hover:scale-y-110 transition-all ease-out duration-300 flex-none cursor-pointer relative"
+              className="border border-primary h-[60vh] w-[35vh] rounded-xl overflow-hidden hover:w-[45vh] hover:scale-y-110 transition-all ease-out duration-300 flex-none cursor-pointer relative"
               onMouseEnter={() => handleMouseEnter(1)}
               onMouseLeave={() => handleMouseLeave(1)}
             >
@@ -107,7 +136,7 @@ export default function Section1() {
 
             {/* 2 - NFT Collection - Zigma */}
             <div
-              className="border border-white h-[60vh] w-[35vh] rounded-xl overflow-hidden hover:w-[45vh] hover:scale-y-110 transition-all ease-out duration-300 flex-none cursor-pointer relative"
+              className="border border-primary h-[60vh] w-[35vh] rounded-xl overflow-hidden hover:w-[46vh] hover:scale-y-110 transition-all ease-out duration-300 flex-none cursor-pointer relative"
               onMouseEnter={() => handleMouseEnter(2)}
               onMouseLeave={() => handleMouseLeave(2)}
             >
@@ -128,7 +157,7 @@ export default function Section1() {
 
             {/* 3 - Metagame Portal - Nexus */}
             <div
-              className="border border-white h-[60vh] w-[35vh] rounded-xl overflow-hidden hover:w-[45vh] hover:scale-y-110 transition-all ease-out duration-300 flex-none cursor-pointer relative"
+              className="border border-primary h-[60vh] w-[35vh] rounded-xl overflow-hidden hover:w-[45vh] hover:scale-y-110 transition-all ease-out duration-300 flex-none cursor-pointer relative"
               onMouseEnter={() => handleMouseEnter(3)}
               onMouseLeave={() => handleMouseLeave(3)}
             >
@@ -149,7 +178,7 @@ export default function Section1() {
 
             {/* 4 - AI Agent - Azul */}
             <div
-              className="border border-white h-[60vh] w-[35vh] rounded-xl overflow-hidden hover:w-[45vh] hover:scale-y-110 transition-all ease-out duration-300 flex-none cursor-pointer relative"
+              className="border border-primary h-[60vh] w-[35vh] rounded-xl overflow-hidden hover:w-[45vh] hover:scale-y-110 transition-all ease-out duration-300 flex-none cursor-pointer relative"
               onMouseEnter={() => handleMouseEnter(4)}
               onMouseLeave={() => handleMouseLeave(4)}
             >

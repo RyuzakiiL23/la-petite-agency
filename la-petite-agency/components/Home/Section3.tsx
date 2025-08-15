@@ -41,12 +41,12 @@ export default function Section3() {
         'Fusce et augue vel dui viverra interdum sed non felis.',
       image: '/images/blog5.jpg',
     },
-    {
-      title: 'Emerald Whisper',
-      description:
-        'Donec luctus erat at risus pulvinar, ut malesuada justo cursus.',
-      image: '/images/blog5.jpg',
-    },
+    // {
+    //   title: 'Emerald Whisper',
+    //   description:
+    //     'Donec luctus erat at risus pulvinar, ut malesuada justo cursus.',
+    //   image: '/images/blog5.jpg',
+    // },
   ];
 
   useEffect(() => {
