@@ -1,13 +1,18 @@
+'use client'
 import Hero from "@/components/Home/Hero";
-import Section1 from "@/components/Home/Section1";
+import dynamic from "next/dynamic";
+
+const ClientSideComp = dynamic(() => import("@/components/Home/Section1"), {
+  ssr: false
+});
 
 export default function Home() {
   return (
     <>
-    <div className="h-screen w-full flex justify-center ">
-      <Hero/>
-    </div>
-      <Section1/>
+      <div className="h-screen w-full flex justify-center ">
+        <Hero />
+      </div>
+      <ClientSideComp />
     </>
   );
 }
